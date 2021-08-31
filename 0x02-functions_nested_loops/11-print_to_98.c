@@ -11,14 +11,14 @@ void print_to_98(int n)
 
 	for (i = n; i < 98; i++)
 	{
-		putchar(i);
+		putchar('0' + i);
 		putchar(',');
 		putchar(' ');
 	}
 
 	for (i = n; i > 98; i--)
 	{
-		putchar(i);
+		putchar('0' + i);
 		putchar(',');
 		putchar(' ');
 	}
