@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * times_table - prints time table
@@ -17,9 +17,9 @@ void times_table(void)
 
 			_putchar(' ');
 			if (r == 0)
-				putchar(' ');
+				_putchar(' ');
 			else
-				putchar('0' + r);
+				_putchar('0' + r);
 			_putchar('0' + i * j % 10 );
 			_putchar(',');
 		}
