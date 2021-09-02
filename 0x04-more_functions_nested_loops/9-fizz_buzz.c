@@ -22,7 +22,8 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", j);
-		putchar(' ');
+		if (j != 100)
+			putchar(' ');
 	}
 	putchar('\n');
 
