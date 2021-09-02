@@ -24,6 +24,7 @@ int main(void)
 			printf("%d", j);
 		putchar(' ');
 	}
+	putchar('\n');
 
 	return (0);
 }
