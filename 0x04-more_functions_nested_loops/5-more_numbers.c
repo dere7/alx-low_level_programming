@@ -9,7 +9,7 @@ void more_numbers(void)
 
 	for (j = 0; j < 10; j++)
 	{
-		for (i = 0; i < 14; i++)
+		for (i = 0; i <= 14; i++)
 		{
 			int ones = i % 10;
 			int tens = i / 10;
@@ -19,7 +19,8 @@ void more_numbers(void)
 
 			_putchar('0' + ones);
 		}
+
+		_putchar('\n');
 	}
 
-	_putchar('\n');
 }
