@@ -7,11 +7,13 @@
 */
 char *string_toupper(char *s)
 {
+	char *t = s;
+
 	while (*s != '\0')
 	{
 		if (*s >= 'a' && *s <= 'z')
 			*s -= 'a' - 'A';
 		s++;
 	}
-	return (s);
+	return (t);
 }

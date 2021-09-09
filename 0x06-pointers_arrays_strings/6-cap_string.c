@@ -7,6 +7,8 @@
 */
 char *cap_string(char *s)
 {
+	char *t = s;
+
 	while (*s != '\0')
 	{
 		if ((*(s - 1) == ' ' || *(s - 1) == '\t' ||
@@ -19,5 +21,5 @@ char *cap_string(char *s)
 			*s -= 'a' - 'A';
 		s++;
 	}
-	return (s);
+	return (t);
 }
