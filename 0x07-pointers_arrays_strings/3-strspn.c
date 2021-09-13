@@ -4,7 +4,8 @@
  * _strspn - gets length of a prefix substring
  * @s: string
  * @accept: char to be located
- * Return: the number of bytes in the initial segment of s which consist only of bytes from accept
+ * Return: the number of bytes in the initial segment of
+ * s which consist only of bytes from accept
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -20,8 +21,8 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		
-		if(*(accept + i) == '\0')
+
+		if (*(accept + i) == '\0')
 			return (len);
 	}
 

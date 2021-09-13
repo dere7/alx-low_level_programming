@@ -1,7 +1,7 @@
 #include <stddef.h>
 
 /**
- * _strbrk - searches a string for any of a set of bytes
+ * _strpbrk - searches a string for any of a set of bytes
  * @s: string
  * @accept: char to be located
  * Return:  pointer to the byte in s that matches one of
