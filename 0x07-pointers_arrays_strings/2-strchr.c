@@ -6,20 +6,13 @@
  * @c: char to be located
  * Return: pointer to first occurance of c in string s
  */
-
-char *_strchr(char *s, char c)
+/*
+char *_strchr(char *s, int c)
 {
-	int i = 0;
+	do {
+		if (*s == c)
+			return (char *)s;
+	} while (*s++);
 
-	if (c == '\0')
-		return ('\0');
-
-	while (*(s + i) != '\0')
-	{
-		if (c == *(s + i))
-			return (s + i);
-		i++;
-	}
-
-	return (NULL);
+	return (0);
 }
