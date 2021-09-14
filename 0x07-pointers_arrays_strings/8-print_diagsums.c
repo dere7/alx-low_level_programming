@@ -1,22 +1,17 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - prints sum of els in diagonals
+ * set_string - prints sum of els in diagonals
  * @a: array
  * @size: size of array
  */
-void print_diagsums(int *a, int size)
+void set_string(char **s, char *to)
 {
-	int sum = 0, sum2 = 0, i;
+	int i = 0;
 
-	for (i = 0; i < size * size; i++)
+	while (to[i] != '\0')
 	{
-		if (i / size == i % size)
-			sum += *(a + i);
-
-		if (i / size + i % size == size - 1)
-			sum2 += *(a + i);
+		**(s + i) = to[i];
+		i++;
 	}
-
-	printf("%d, %d\n", sum, sum2);
 }

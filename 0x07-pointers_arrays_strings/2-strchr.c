@@ -6,7 +6,7 @@
  * @c: char to be located
  * Return: pointer to first occurance of c in string s
  */
-/*
+
 char *_strchr(char *s, int c)
 {
 	do {
