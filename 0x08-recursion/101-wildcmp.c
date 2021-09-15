@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * test - tests if wildcard is a proper match
  * @s5: string to compare
