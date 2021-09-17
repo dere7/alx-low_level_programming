@@ -9,7 +9,8 @@
  */
 int main(int argc, char const *argv[])
 {
-	int cents;
+	int cents, n = 0, i;
+	int cent[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -21,7 +22,16 @@ int main(int argc, char const *argv[])
 	if (cents < 0)
 		puts("0");
 
-	printf("%d\n", cents % 10);
+	for (i = 0; i < 5; i++)
+	{
+		if (cents / cent[i] != 0)
+		{
+			n += cents / cent[i];
+			cents -= cent[i] * n;
+		}
+	}
+
+	printf("%d\n", n);
 
 	return (0);
 }
