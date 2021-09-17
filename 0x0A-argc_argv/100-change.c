@@ -32,6 +32,9 @@ int main(int argc, char const *argv[])
 			{
 				n += remain;
 				cents -= remain * cent[i];
+
+				if (cents == 0)
+					break;
 			}
 		}
 		printf("%d\n", n);
