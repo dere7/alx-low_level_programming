@@ -3,16 +3,21 @@
 #include <stddef.h>
 
 /**
- * malloc_checked - allocates memory
- * @b: size of memory
+ * _calloc - allocates memory for array
+ * @nmemb: array
+ * @size: size of memory
  * Return: a pointer to allocated memory
  */
-void *malloc_checked(unsigned int b)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *mem = malloc(b);
+	void *mem;
 
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	mem = malloc(nmemb * size);
 	if (mem == NULL)
-		exit(98);
+		return (NULL);
 
 	return (mem);
 }

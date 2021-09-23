@@ -22,27 +22,23 @@ int _strlen(char *s)
 
 /**
  * string_nconcat - concatenate two strings
- * @s1: first string 
- * @s2: second string 
- * Return: concatenated string 
+ * @s1: first string
+ * @s2: second string
+ * @n: number of byte to copy
+ * Return: concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 = 0, len2 = 0, i = 0, size;
 	char *str;
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
-
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	len1 = s1 != NULL ? _strlen(s1) : 0;
+	len2 = s2 != NULL ? _strlen(s2) : 0;
 
 	size = len1 + (n >= len2 ? len2 : n);
 	str = malloc(size + 1);
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < size; i++)
 	{
