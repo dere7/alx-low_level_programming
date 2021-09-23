@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	}
 
 	/* allocates memory for size and ac(i.e. for newline at end of each arg) */
-	ch = malloc(sizeof(char) * (size + ac));
+	ch = malloc(sizeof(char) * (size + ac + 1));
 	if (ch == NULL)
 		return (NULL);
 
@@ -45,5 +45,8 @@ char *argstostr(int ac, char **av)
 		ch++;
 	}
 
-	return (ch - size - ac);
+	ch = '\0';
+	ch++;
+
+	return (ch - size - ac - 1);
 }
