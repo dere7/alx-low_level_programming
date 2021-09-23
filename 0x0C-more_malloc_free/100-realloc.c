@@ -3,16 +3,6 @@
 #include <stddef.h>
 
 /**
- * min - finds min of two int
- * @x: first int 
- * @y: second int
- * Return: min of x and y
- */
-int min(int x, int y)
-{
-	return x > y ? y : x;
-}
-/**
  * _realloc - reallocates a memeory block
  * @ptr: pointer to the memory previously allocated 
  * @old_size: he size, in bytes, of the allocated space for ptr
