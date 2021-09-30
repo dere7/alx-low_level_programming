@@ -11,7 +11,7 @@ void printOpcode(char *byte, int size);
  */
 int main(int argc, char const *argv[])
 {
-	unsigned int n;
+	int n;
 
 	if (argc != 2)
 	{
