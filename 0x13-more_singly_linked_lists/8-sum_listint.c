@@ -2,6 +2,7 @@
 /**
  * sum_listint - sum of all the data
  * @head: head of a list
+ * Return: sum of elements
  */
 int sum_listint(listint_t *head)
 {
@@ -14,5 +15,5 @@ int sum_listint(listint_t *head)
 		h = h->next;
 	}
 
-	return sum;
+	return (sum);
 }
