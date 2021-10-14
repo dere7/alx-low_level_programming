@@ -6,7 +6,8 @@
  * @m: second number
  * Return: number of bits needed to be fliped
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m) {
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{
 	unsigned long int bits = n ^ m;
 	unsigned int num_of_bit = 0;
 	long int i = 1;
