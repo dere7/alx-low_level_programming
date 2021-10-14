@@ -1,9 +1,12 @@
 #include "main.h"
+
 /**
- * print_binary - prints the binary representation of a number
- * @n: integer to be printed
+ * get_bit - returns the value of a bit at a givenn index
+ * @n: integer
+ * @index: index
+ * Return: value of the bit at index or -1 if failed
  */
-void print_binary(unsigned long int n)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	long int i = 1;
 
@@ -15,12 +18,15 @@ void print_binary(unsigned long int n)
 	{
 		if (power(2, i) <= n)
 		{
-			_putchar('1');
 			n -= power(2, i);
+			if (index == i)
+				return (1);
 		}
-		else
-			_putchar('0');
+		if (i == index)
+			return (0);
 	}
+	/* if index is out of range */
+	return (-1);
 }
 
 /**
