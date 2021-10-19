@@ -236,6 +236,6 @@ julien@ubuntu:~/0x15. File descriptors and permissions$
 ```
 Repo:
 - GitHub repository: `alx-low_level_programming`
-- Directory: 0x15-file_io
-- File: 3-cp.c
+- Directory: `0x15-file_io`
+- File: `3-cp.c`
 
