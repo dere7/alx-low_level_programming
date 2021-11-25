@@ -31,19 +31,25 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 	}
 	else
-		for (i = 0; i <= idx && head; i++, head = head->next)
+		for (i = 1, head = head->next; i <= idx && head; i++, head = head->next)
 		{
-			if (i + 1 == idx)
+			if (i == idx)
 			{
-				new->next = head->next;
-				new->prev = head;
+				head->prev->next = new;
+				new->prev = head->prev;
+				new->next = head;
+				head->prev = new;
+				break;
+			}
+			else if (i + 1 == idx && head->next == NULL)
+			{
 				head->next = new;
+				new->prev = head;
+				break;
 			}
 		}
-
 	/* if index doesn't exist */
 	if (i > idx)
 		return (NULL);
-
 	return (new);
 }
