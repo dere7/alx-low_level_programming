@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - add new node at the begging of list
+ * add_dnodeint - add new node at the begginning of list
  * @head: head of list to be added
  * @n: int to be added
  * Return: Pointer to newly created node
@@ -13,12 +13,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
-	{
 		return (NULL);
-	}
 	new->n = n;
 	new->prev = NULL;
 	new->next = *head;
+	if (*head != NULL)
+		(*head)->prev = new;
 	*head = new;
 
 	return (new);
