@@ -1,5 +1,5 @@
 CC=gcc
-SRC=$(wildcard *.c)
+SRC=main.c school.c
 OBJ=$(SRC:%.c=%.o)
 NAME=school
 RM=rm
@@ -7,7 +7,6 @@ CFLAGS=-Wall -Werror -Wextra -pedantic
 
 .PHONY: all clean fclean oclean re
 all: $(OBJ)
-	echo $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c
