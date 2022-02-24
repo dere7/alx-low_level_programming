@@ -11,6 +11,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *mem;
+	char *temp;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -18,6 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	mem = malloc(nmemb * size);
 	if (mem == NULL)
 		return (NULL);
-
+	for (i = 0, temp = (char *)mem;  i < nmemb; i++, temp += size)
+		*temp = 0;
 	return (mem);
 }
