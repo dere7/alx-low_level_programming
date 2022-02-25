@@ -15,6 +15,7 @@ def island_perimeter(grid):
                 try:
                     if grid[i - 1][j] == 0 and grid[i + 1][j] == 0\
                        and grid[i][j - 1] == 0 and grid[i][j + 1] == 0:
+                        perimeter += 4
                         continue
                 except IndexError:
                     pass
