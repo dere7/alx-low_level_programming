@@ -12,7 +12,7 @@ all: $(OBJ)
 	$(CC)    -c -o $@ $<
 
 clean:
-	$(RM) -f *~ school
+	$(RM) -f *~ $(NAME)
 
 oclean: 
 	$(RM) -f $(OBJ)
